@@ -40,7 +40,7 @@ int					read_not(char **stock, char **line, int read_size)
 	else
 	{
 		*line = *stock;
-		*stock = NULL;
+		*stock = ft_strdup("");
 		return (0);
 	}
 }
