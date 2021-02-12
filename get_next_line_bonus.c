@@ -20,9 +20,7 @@ int					cut_save(char **stock, char **line, char *newline)
 	*line = ft_strdup(*stock);
 	tmp = ft_strdup(newline + 1);
 	free(*stock);
-	*stock = ft_strdup(tmp);
-	free(tmp);
-	tmp = NULL;
+	*stock = tmp;
 	return (1);
 }
 
@@ -40,7 +38,7 @@ int					read_not(char **stock, char **line, int read_size)
 	else
 	{
 		*line = *stock;
-		*stock = ft_strdup("");
+		*stock = NULL;
 		return (0);
 	}
 }
